@@ -25,6 +25,7 @@ const appimageArm64 = 'appimage-arm64';
 const dir = 'dir';
 const dirArm64 = 'dir-arm64';
 const mac = 'mac';
+const macArm64 = 'mac-arm64';
 const snap = 'snap';
 const snapArm64 = 'snap-arm64';
 const deb = 'deb';
@@ -40,6 +41,7 @@ const availableTargets = [
   dir,
   dirArm64,
   mac,
+  macArm64,
   snap,
   snapArm64,
   windows,
@@ -101,6 +103,14 @@ const availableTargets = [
         await runCommand('yarn run webpack --config webpack.prod.js');
         await runCommand(
           'yarn run electron-builder --mac --x64 --publish=never'
+        );
+        await runCommand('node scripts/fix-mac-zip');
+        break;
+      case macArm64:
+        await runCommand('yarn run webpack --config webpack.prod.js', arm64Env);
+        await runCommand(
+          'yarn run electron-builder --mac --arm64 --publish=never',
+          arm64Env
         );
         await runCommand('node scripts/fix-mac-zip');
         break;

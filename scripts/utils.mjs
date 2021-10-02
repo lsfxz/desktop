@@ -15,6 +15,9 @@ export async function getLatestBuiltFilesList() {
     `standard-notes-${version}-linux-arm64.deb`,
     `standard-notes-${version}-linux-arm64.AppImage`,
 
+    `standard-notes-${version}-mac-arm64.dmg`,
+    `standard-notes-${version}-mac-arm64.dmg.blockmap`,
+
     `standard-notes-${version}-win.exe`,
     `standard-notes-${version}-win.exe.blockmap`,
 

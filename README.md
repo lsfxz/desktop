@@ -57,6 +57,7 @@ or
 - `yarn build windows`
 - `yarn build appimage:arm64`
 - `yarn build deb:arm64`
+- `yarn build mac:arm64`
 
 ## Building natively on arm64
 
@@ -90,6 +91,7 @@ Or the individual commands:
 - `yarn build:appimage:arm64`
 - `yarn build:deb:arm64`
 - `yarn build:snap:arm64`
+- `yarn build mac:arm64`
 
 ## Installation
 
